@@ -8,6 +8,12 @@
 	<script src="app.js"></script>
 </head>
 <body>
+	<!--$.each(result.items, function(i, item) {*/
+      var user = item.user
+      var name = user.display_name
+			$('.tag-results').append('<div class="result" ><h4><a target="_blank" href="' + user.link + '">' + user.display_name + '</a></h4><div><img src="' + user.profile_image + '"></div><p> Rep: ' + user.reputation + '</p></div>' );
+		});
+-->
 	<div class="container">
 		<div class="intro">
 			<div class="left stack-image"></div>
@@ -27,15 +33,17 @@
 			</form>
 			<h3>View the Top Answerers for a Tag</h3>
 			<form class="inspiration-getter" onsubmit="return false;">
-				<input type="text" placeholder="e.g., jQuery" name="answerers" size="30"  required>
+				<input type="text" placeholder="e.g., jQuery" name="answers" size="30"  required>
 				<input type="submit" value="Submit">
 			</form>
 		</div>
 		<div class="results-container">
 			<div class="search-results"></div>
-			<div class="results"></div>
+			<div class="results" style="width: 49.5%; float: left;"></div>
+<div class="tag-results" style="width: 49.5%; float: right;"></div>
 		</div>
 	</div>
+	<div id="r"> </div>
 	<div class="templates hidden">
 		<dl class="result question">
 			<dt>Question</dt>
@@ -47,9 +55,12 @@
 			<dt>Asker</dt>
 				<dd class="asker"></dd>
 		</dl>
+		
 		<div class="error">
 			<p>Uh-oh! Something went wrong with your request. Here's what we know:</p>
 		</div>
+	  </div>
 	</div>
+
 </body>
 </html>

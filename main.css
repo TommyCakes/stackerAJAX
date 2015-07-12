@@ -3,6 +3,7 @@
 	width: 600px;
 }
 
+
 .hidden {
 	display: none;
 }
@@ -38,9 +39,17 @@
 	border: 1px solid black;
 	padding: 5px;
 	margin: 0 auto 1em auto;
+  height: 250px;
+  overflow: hidden;
 }
 
 .error {
 	background-color: #F78181;
 	padding: 1em;
+}
+.name {
+  color:red;
+  font-size: 50px;
+  font-family: arial;
+  
 }
